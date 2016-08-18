@@ -1,0 +1,69 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+        <title>Layout Grid</title> 
+        
+        <!-- This file just styles the current page.  You don't need it to make the grid work -->
+        <link rel="stylesheet" href="grid_internal.css" type="text/css" media="screen">
+        
+        <link rel="stylesheet" href="grid.css" type="text/css" media="screen">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="grid.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script type="text/javascript">
+            $(document).ready(function() {
+                Array.prototype.push.apply(layoutGrid.highlightRows, [2, 4]);
+                Array.prototype.push.apply(layoutGrid.highlightCols, [5, 7, 34]);
+                layoutGrid.showGrid();
+            });
+        </script>
+    </head> 
+    <body>
+        <h1>Layout Grid</h1>
+    
+        <p>
+            This tool shows a layout grid that you can use to align the elements in your page.  The grid is simple, fast, and configurable.  All you have to do is call this function when your page starts:  <code>layoutGrid.showGrid();</code>
+        </p>
+        
+        <p>
+            You can change the color of the grid in the <code>grid.css</code> file.  Like this:
+        </p>
+        
+        <pre><code>div.gridLayoutColor {
+    background-color: rgba(225, 225, 225, 0.3);
+}
+
+div.gridLayoutColColor {
+    background-color: rgba(0, 255, 255, 0.8);
+}
+
+div.gridLayoutRowColor {
+    background-color: rgba(0, 255, 255, 0.8);
+}</code></pre>
+
+        <p>
+            And you can change the size of the grid in the same <code>grid.css</code> file like this:
+        </p>
+        
+        <pre><code>div.gridLayoutRow {
+    height: 28px;
+}
+
+div.gridLayoutColumn {
+    width: 28px;
+    padding-right: 0px;
+}</code></pre>
+    
+        <p>
+            You can add highlight rows in the code at the top of your page like this:
+        </p>
+    
+        <pre><code>Array.prototype.push.apply(layoutGrid.highlightRows, [2, 4]);
+Array.prototype.push.apply(layoutGrid.highlightCols, [5, 7]);</code></pre>
+    
+        <p>
+            The grid also comes with a button to move the grid so it is either above or below the contents of the page.
+        </p>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+#mainGridLayout {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 0px;
+    z-index: -1;
+}
+
+#gridLayoutButton {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 9999;
+}
+
+/*
+ * These styles control the color and size of the grid.
+ */
+
+/*
+ * This is the color of the grid lines
+ */
+div.gridLayoutColor {
+    background-color: rgba(225, 225, 225, 0.5);
+}
+
+div.gridLayoutColColor {
+    background-color: rgba(0, 255, 255, 0.8);
+}
+
+div.gridLayoutRowColor {
+    background-color: rgba(0, 255, 255, 0.8);
+}
+
+/*
+ * This is the height of each row in the grid
+ */
+div.gridLayoutRow {
+    height: 28px;
+}
+
+/*
+ * This is the width of the columns in the grid.  The width property is
+ * the width of the cell and the padding on the right is the width of the 
+ * spacer after each column.
+ */
+div.gridLayoutColumn {
+    width: 28px;
+    padding-right: 0px;
+}
