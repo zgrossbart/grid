@@ -32,3 +32,10 @@ pre {
     display: block;
     position: relative;
 }
+
+p.gridMoveBox {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    background: #166888;
+    color: white;
+}
