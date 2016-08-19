@@ -23,9 +23,17 @@
         <a href="https://github.com/zgrossbart/grid"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
         
         <h1>Layout Grid</h1>
+        
+        <p>
+            This project is a little JavaScript library that uses a canvas tag to draw a grid on your page.  The grid helps with alignment issues and <a href="http://webtypography.net/2.2.2">vertical rhythm</a>.  It only depends on <a href="http://jquery.com/">jQuery</a>.
+        </p>
+        
+        <p>
+            There are some good browser plugins for drawing a grid on your pages, but I wanted something I could integrate to my applications so I could check the grid across all browsers.            
+        </p>
     
         <p>
-            This tool shows a layout grid that you can use to align the elements in your page.  The grid is simple, fast, and configurable.  All you have to do is call this function when your page starts:  <code>layoutGrid.showGrid();</code>
+            The grid is simple, fast, and configurable.  All you have to do is call this function when your page loads:  <code>layoutGrid.showGrid();</code>
         </p>
         
         <p>
@@ -58,14 +66,18 @@ div.gridLayoutColumn {
 }</code></pre>
     
         <p>
-            You can add highlight rows in the code at the top of your page like this:
+            The grid also supports highlight columns and rows.  Those are the cyan lines that call attention to specific lines in your grid.  Add highlights in the code at the top of your page like this:
         </p>
     
         <pre><code>Array.prototype.push.apply(layoutGrid.highlightRows, [2, 4]);
 Array.prototype.push.apply(layoutGrid.highlightCols, [5, 7]);</code></pre>
     
         <p class="gridMoveBox">
-            There's also a button in the bottom right corner to move the grid above or below the contents of the page.  Move the grid above the contents to see it over sections with opaque and move it back below the content so you can interact with your page.
+            There's also a button in the bottom right corner to move the grid above or below the contents of the page.  Move the grid above the contents to see it over sections with opaque backgrounds and move it back below the content so you can interact with your page.
+        </p>
+        
+        <p>
+            Take the code, copy it into your project, customize your grid, and make something beautiful.
         </p>
     </body>
 </html>
