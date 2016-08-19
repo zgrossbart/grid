@@ -16,6 +16,16 @@ h1 {
     margin-bottom: 21px;
 }
 
+h2 {
+    font-size: 24px;
+    line-height: 56px;
+    font-family: "ff-basic-gothic-web-pro", Verdana,Arial,Sans-serif;
+    margin-left: 186px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 16px;
+}
+
 p, pre {
     margin-left: 189px;
     width: 755px;
