@@ -33,6 +33,19 @@ var layoutGrid = {
                 gridOnTop = true;                
             }
         };
+        
+        var gridOn = true;
+        var toggleGridOff = function() {
+            if (gridOn) {
+                $('#mainGridLayout').hide()
+                $('#gridOnOffButton').text('Turn grid on');
+                gridOn = false;
+            } else {
+                $('#mainGridLayout').show();
+                $('#gridOnOffButton').text('Turn grid off');
+                gridOn = true;                
+            }
+        };
     
         var doLayoutGrid = function() {
             var context = $('#mainGridLayout').get(0).getContext('2d');
@@ -93,6 +106,10 @@ var layoutGrid = {
             var button = $('<button id="gridLayoutButton">Move grid to the top</button>');
             $('body').append(button);
             button.click(toggleGridUp);
+            
+            button = $('<button id="gridOnOffButton">Turn grid off</button>');
+            $('body').append(button);
+            button.click(toggleGridOff);
         
         };
     
