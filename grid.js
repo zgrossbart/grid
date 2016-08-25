@@ -37,7 +37,7 @@ var layoutGrid = {
         var gridOn = true;
         var toggleGridOff = function() {
             if (gridOn) {
-                $('#mainGridLayout').hide()
+                $('#mainGridLayout').hide();
                 $('#gridOnOffButton').text('Turn grid on');
                 gridOn = false;
             } else {
@@ -110,6 +110,10 @@ var layoutGrid = {
             button = $('<button id="gridOnOffButton">Turn grid off</button>');
             $('body').append(button);
             button.click(toggleGridOff);
+            
+            if (layoutGrid.gridStartsOff) {
+                toggleGridOff();
+            }
         
         };
     
